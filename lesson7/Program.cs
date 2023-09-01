@@ -116,10 +116,10 @@ void CountAverage(int[,] array1)
         for (int j = 0; j < m1; j++)
         {
             sum += array1[j, i];
-            average = sum / n1;
+            average = (double)sum / (double)m1;
         }
         System.Console.WriteLine(
-            $"Среднее арифметическое элементов массива столбца {i + 1}: {average}"
+            $"Среднее арифметическое элементов массива столбца {i + 1}: {Math.Round(average, 1)}"
         );
     }
 }
