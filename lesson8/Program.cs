@@ -116,6 +116,7 @@ void PrintMinRow(int[,] array)
 // Результирующая матрица будет:
 // 18 20
 // 15 18
+System.Console.WriteLine("");
 System.Console.WriteLine("Задача №3.");
 
 Console.WriteLine($"\nВведите размеры матриц и диапазон случайных значений:");
@@ -185,7 +186,7 @@ void WriteArray(int[,] array)
 // 34(1,0,0) 41(1,1,0)
 // 27(0,0,1) 90(0,1,1)
 // 26(1,0,1) 55(1,1,1)
-
+System.Console.WriteLine("");
 Console.WriteLine($"Задача 4.");
 Console.WriteLine($"\nВведите размер массива X x Y x Z:");
 int x = Prompt("Введите X: ");
@@ -248,6 +249,7 @@ void WriteArray1(int[,,] array3D)
         Console.WriteLine();
     }
 }
+
 
 // Задача 62. Напишите программу, которая заполнит спирально массив 4 на 4.
 // Например, на выходе получается вот такой массив:
