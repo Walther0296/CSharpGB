@@ -14,19 +14,37 @@ int Prompt(string message)
 System.Console.WriteLine("Задача №1.");
 
 int N = Prompt("Введите число N: ");
-int Ex = 1; 
+int Ex = 1;
 System.Console.Write(NumbersRec(N, Ex));
+System.Console.WriteLine("");
 
-string NumbersRec (int N, int Ex){
-    if (N>Ex) return $"{N}, " + NumbersRec(N-1, Ex); 
-    else return $"{Ex}."; 
+string NumbersRec(int N, int Ex)
+{
+    if (N > Ex)
+        return $"{N}, " + NumbersRec(N - 1, Ex);
+    else
+        return $"{Ex}.";
 }
 
 // Задача 66: Задайте значения M и N. Напишите программу, которая найдёт сумму натуральных элементов в промежутке от M до N.
 // M = 1; N = 15 -> 120
 // M = 4; N = 8. -> 30
 
+System.Console.WriteLine("Задача №2.");
 
+int M = Prompt("Введите число M: ");
+int N1 = Prompt("Введите число N: ");
+System.Console.Write(SumRec(M, N1));
+
+int SumRec(int M, int N1)
+{
+    if (M > N1)
+        return N1 + SumRec(N1 + 1, M);
+    else if (M < N1)
+        return M + SumRec(M + 1, N1);
+    else
+        return M;
+}
 
 
 
