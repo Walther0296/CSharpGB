@@ -78,14 +78,19 @@ System.Console.WriteLine("Задача №4.");
 
 int A = Prompt("Введите число A: ");
 int B = Prompt("Введите число B: ");
-System.Console.Write(Power(A, B));
+System.Console.Write(Result (A, B));
 
 int Power(int A, int B)
 {
     if (B == 0)
         return 1;
-    else if (B == 1)
-        return 1 / A;
+    else if (B == 1 && A!=0)
+        return A;
     else
-        return 1 / A * Power(A, B - 1);
+        return A * Power(A, B - 1);
+}
+
+double Result (int A, int B) {
+    double res = 1.0 / Power(A, B);
+    return (Math.Round(res, B));  
 }
