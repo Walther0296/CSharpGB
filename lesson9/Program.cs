@@ -77,7 +77,7 @@ int Akkerman(int m, int n)
 System.Console.WriteLine("Задача №4.");
 
 int A = Prompt("Введите число A: ");
-int B = Prompt("Введите число B: ");
+int B = Prompt("Введите число отрицательное число B: ");
 System.Console.Write(Result (A, B));
 
 int Power(int A, int B)
