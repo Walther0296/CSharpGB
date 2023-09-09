@@ -35,6 +35,7 @@ System.Console.WriteLine("Задача №2.");
 int M = Prompt("Введите число M: ");
 int N1 = Prompt("Введите число N: ");
 System.Console.Write(SumRec(M, N1));
+System.Console.WriteLine("");
 
 int SumRec(int M, int N1)
 {
@@ -46,12 +47,45 @@ int SumRec(int M, int N1)
         return M;
 }
 
-
-
-
-
-
-
 // Задача 68: Напишите программу вычисления функции Аккермана с помощью рекурсии. Даны два неотрицательных числа m и n.
 // m = 2, n = 3 -> A(m,n) = 9
 // m = 3, n = 2 -> A(m,n) = 29
+System.Console.WriteLine("Задача №3.");
+
+int m = Prompt("Введите число m: ");
+int n = Prompt("Введите число n: ");
+System.Console.Write(Akkerman(m, n));
+System.Console.WriteLine("");
+
+int Akkerman(int m, int n)
+{
+    if (m == 0)
+    {
+        return n + 1;
+    }
+    else if (n == 0 && m > 0)
+    {
+        return Akkerman(m - 1, 1);
+    }
+    else
+    {
+        return (Akkerman(m - 1, Akkerman(m, n - 1)));
+    }
+}
+
+// Задача с семинара: Напишите программу вычисления результата возведения числа в отрицательную степень
+System.Console.WriteLine("Задача №4.");
+
+int A = Prompt("Введите число A: ");
+int B = Prompt("Введите число B: ");
+System.Console.Write(Power(A, B));
+
+int Power(int A, int B)
+{
+    if (B == 0)
+        return 1;
+    else if (B == 1)
+        return 1 / A;
+    else
+        return 1 / A * Power(A, B - 1);
+}
